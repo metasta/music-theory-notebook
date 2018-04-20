@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<title>和音</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<script src="abcjs_basic_4.0.0-min.js"></script>
+
+<nav id="header">
+<ul>
+<li>音楽理論ノート
+<li>和音
+</ul>
+</nav>
+
+<h1>和音</h1>
+
+<p>高さの異なる2つ以上の音が同時に響く音を<dfn>和音</dfn>と呼ぶ。</p>
+<!-- p>和音の連結を<dfn>和声</dfn>と呼ぶ。</p -->
+
+<nav id="table-of-contents"></nav>
+
+<h2>和音の種類</h2>
+
+<h3>(1) 三和音</h3>
+
+<p>ある音（<dfn>根音</dfn>）の上に3度と5度の音を重ねた和音を<dfn>三和音</dfn>と呼ぶ。</p>
+<p>3度の音を<dfn>第3音</dfn>、5度の音を<dfn>第5音</dfn>と呼ぶ。</p>
+<div class="score">
+L:1
+K:C
+[CEG]
+</div>
+
+<p>構成音の音程により、三和音には長・短・増・減の4種類がある。</p>
+<div class="score">
+L:1
+K:C
+"長"[CEG]||"短"[C_EG]||"増"[C=E^G]||"減"[C_E_G]
+</div>
+<p>左から<dfn>長三和音</dfn>､ <dfn>短三和音</dfn>､ <dfn>増三和音</dfn>､ <dfn>減三和音</dfn>と呼ぶ。</p>
+<p>長・短三和音は協和音であり、増・減三和音は不協和音である。</p>
+
+<aside>
+<p>それぞれ、3度の積み重ねとして次のように表すことができる。
+<ul>
+<li>長三和音 ＝ 長3度＋短3度
+<li>短三和音 ＝ 短3度＋長3度
+<li>増三和音 ＝ 長3度＋長3度
+<li>減三和音 ＝ 短3度＋短3度
+</ul>
+</aside>
+
+<aside>
+<p>（参考）コードネームでは次のように表される。</p>
+<ul>
+<li>ド（C）を根音とする長三和音： C = C△
+<li>ド（C）を根音とする短三和音： Cm = C-
+<li>ド（C）を根音とする増三和音： C(#5) = Caug = C+
+<li>ド（C）を根音とする減三和音： Cm(♭5) = Cdim = C○
+</ul>
+</aside>
+
+<h3>(2) <ruby>七<rt>しち</ruby>の和音</h3>
+<p>三和音に7度の音（<dfn>第7音</dfn>）を重ねた4つの音からなる和音を<dfn><ruby>七<rt>しち</ruby>の和音</dfn>と呼ぶ。</p>
+
+<div class="score">
+L:1
+K:C
+[CEG_B]
+</div>
+
+<p>構成音の音程により、七の和音にはいくつか種類がある。次の4種類は特によく用いられる。</p>
+<div class="score">
+L:1
+K:C
+"属"[CEG_B]||"長"[CEG=B]||"短"[C_EG_B]||"減"[C_E_G__B]
+</div>
+<p>左から<dfn>属七の和音</dfn>､ <dfn>長七の和音</dfn>､ <dfn>短七の和音</dfn>､ <dfn>減七の和音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>それぞれ、三和音＋3度の積み重ねとして次のように表すことができる。
+<ul>
+<li>属七の和音 ＝ 長三和音＋短3度
+<li>長七の和音 ＝ 長三和音＋長3度
+<li>短七の和音 ＝ 短三和音＋短3度
+<li>減七の和音 ＝ 減三和音＋短3度
+</ul>
+</aside>
+
+<aside>
+<p>（参考）コードネームでは次のように表される。</p>
+<ul>
+<li>ド（C）を根音とする属七の和音： C7
+<li>ド（C）を根音とする長七の和音： CM7 = Cmaj7 = C△7
+<li>ド（C）を根音とする短七の和音： Cm7 = C-7
+<li>ド（C）を根音とする減七の和音： Cdim7 = C○7
+</ul>
+</aside>
+
+<aside>
+<p>この4種類の他にも、たとえば次のような七の和音がある。</p>
+<p><small>（コードネームはすべてド（C）を根音とする場合）</small></p>
+<ul>
+<li>短三和音＋長3度 CmM7 = C-△7
+<li>増三和音＋短3度 CM7(♯5) = Caug7
+<li>減三和音＋長3度 Cm7(♭5) = CdimM7 = C∅
+</ul>
+</aside>
+
+
+<aside>
+<p>なぜ「長三和音＋短3度」の和音を「属七の和音」と呼ぶのかは後述する。</p>
+</aside>
+
+<h3>(3) 九の和音</h3>
+
+<p>七の和音にさらに9度の音を重ねた計5つの音からなる和音を<dfn>九の和音</dfn>と呼ぶ。</p>
+<p>属七の和音＋長3度からなる<dfn>属九の和音</dfn>がよく用いられる。</p>
+
+<div class="score">
+L:1
+K:C
+[CEG_Bd]
+</div>
+
+<aside>
+<p>なお、4音で九の和音を表現する場合は第5音が省略される。</p>
+<div class="score">
+L:1
+K:C
+[CE_Bd]
+</div>
+</aside>
+
+<aside>
+<p>補足：和音の配置・重複・省略</p>
+<p>和音を構成する各音は、octave 単位で好きな高さに配置できる。</p>
+<div class="score">
+L:1
+K:C
+[CEG] || [CGe]
+</div>
+
+<p>同じ音を重ねることもできる。重複する音は根音であることが多い。</p>
+<div class="score">
+L:1
+K:C
+[CEG_B] || [CEG_Bc]
+</div>
+
+<p>音を省略することもできる。5音が省略されることが多い。</p>
+<div class="score">
+L:1
+K:C
+[CEG_B] || [CE_B]
+</div>
+
+</aside>
+
+<h2>和音の転回</h2>
+
+<p>同じ構成音からなる和音でも、一番下に来る音が変わると多少性格が変化する。</p>
+<p>根音を最低音とする形を<dfn>基本形</dfn>と呼び、根音以外を最低音とする形を<dfn>転回形</dfn>と呼ぶ。</p>
+
+<h3>(1) 三和音の転回</h3>
+
+<aside>
+<p>三和音の基本形の例</p>
+<div class="score">
+L:1
+K:C
+[CEG] [CEGc] [CGe]
+</div>
+<p>根音（ド）が最低音なので、これらはすべて基本形である。</p>
+</aside>
+
+<p>第3音を最低音とする形をその和音の<dfn>第1転回形</dfn>と呼ぶ。</p>
+<p>最低音から上6度の位置に根音が来るため、三和音の第1転回形を<dfn>六の和音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>三和音の第1転回形（六の和音）の例</p>
+<div class="score">
+L:1
+K:C
+[EGc] [EGce] [Ecg]
+</div>
+<p>第3音（ミ）が最低音なので、これらはすべて第1転回形である。</p>
+<p>根音（ド）が最低音（ミ）の6度上にあるため六の和音と呼ばれる。</p>
+</aside>
+
+<p>第5音を最低音とする形をその和音の<dfn>第2転回形</dfn>と呼ぶ。</p>
+<p>最低音から上4度の位置に根音、上6度の位置に第3音が来るため、三和音の第2転回形を<dfn>四六の和音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>三和音の第2転回形（四六の和音）の例</p>
+<div class="score">
+L:1
+K:C
+[Gce] [Gceg] [Gec']
+</div>
+<p>第5音（ソ）が最低音なので、これらはすべて第2転回形である。</p>
+<p>根音（ド）、第3音（ミ）が最低音（ソ）の4,6度上にあるため四六の和音と呼ばれる。</p>
+</aside>
+<h3>(2) 七の和音の転回</h3>
+<p>三和音と同様、七の和音にも基本形、第1転回形、第2転回形、さらに<dfn>第3転回形</dfn>が存在する。</p>
+<p>七の和音の第1〜第3転回形を、その構成からそれぞれ<dfn>五六の和音</dfn>､ <dfn>三四の和音</dfn>､ <dfn>二の和音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>七の和音の基本形と第1〜第3転回形の例</p>
+<div class="score">
+L:1
+K:C
+[CEG_B] || "1"[EG_Bc] || "2"[G_Bce] || "3"[_B,CE]
+</div>
+<p>左から 基本形、(1) 第1転回形＝五六の和音、(2) 第2転回形＝三四の和音、(3) 第3転回形＝二の和音。</p>
+<p>第1転回形 (1) では第7音（シ♭）、根音（ド）は最低音（ミ）の5,6度上にある。</p>
+<p>第2転回形 (2) では第7音（シ♭）、根音（ド）は最低音（ソ）の3,4度上にある。</p>
+<p>第3転回形 (3) では根音（ド）は最低音（シ♭）の2度上にある。</p>
+<p>なお (3) の例では第5音（ソ）が省略されている。</p>
+</aside>
+
+<h3>(3) 九の和音の転回</h3>
+<p>三和音や七の和音と同様、九の和音にも転回形がある。</p>
+
+<aside>
+<div class="score">
+L:1
+K:C
+[CEG_Bd] || [EG_Bcd] || [Gce_bd'] || [_B,EGcd] || [D_bce]
+</div>
+<p>左から 基本形、第1、第2、第3、第4転回形の例。</p>
+<p>一番右の例では第5音（ソ）が省略されている。</p>
+</aside>
+
+<aside>
+<p>練習：次の和音の種類（長三和音、短三和音、…）と転回形（基本形、第1、第2、…）を答えよ。</p>
+<div class="score">
+L:1
+K:C
+V:1
+"1."[_Ec] || "2."[^Fd] || "3."[FB] || "4."[Ac] ||
+V:2 bass
+    [C,G,] || [D,^A,] ||     [D,D] ||  [^F,_E] ||
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>それぞれの和音の構成音を整理する。</p>
+<div class="score">
+L:1
+K:C
+"1."[C_EG] || "2."[D^F^A] || "3."[B,DF] || "4."[^FAc_e] ||
+</div>
+
+<ol>
+<li>ドを根音とする短三和音（基本形）
+<li>レを根音とする増三和音（基本形）
+<li>シを根音とする減三和音（第1転回形）
+<li>ファ＃を根音とする減七の和音（基本形）
+<br>また、異名同音により以下も正解となる。
+<ul>
+<li>ラを根音とする減七の和音（第3転回形）
+<li>ドを根音とする減七の和音（第2転回形）
+<li>ミ♭を根音とする減七の和音（第1転回形）
+</ul>
+</ol>
+</div>
+</aside>
+
+
+<h2>和音記号</h2>
+
+<aside>
+<p>和音は曲の中で様々な働きを担う。</p>
+<p>たとえば「ドミナント機能」という機能がある。これはハ長調の曲においてはソを根音とする属七の和音（G7）が持つ機能で、ドを根音とする長三和音（C）に進もうとする強い性質のことを指す。（G7 → C）</p>
+<div class="score">
+L:1
+K:C
+"G7"[G,B,DF] | "C"[CEG]||
+</div>
+<p>ト長調ではドミナント機能を持つのはレを根音とする属七の和音（D7）であり、同様にソを根音とする長三和音（G）に進もうとする。（D7 → G）</p>
+<div class="score">
+L:1
+K:G
+[DFAc] | [GBd]||
+</div>
+<p>あるいはまたニ短調であれば、ドミナント機能を持つのは A7 であり、Dm へと進もうとする。（A7 → Dm）</p>
+<div class="score">
+L:1
+K:F
+[A,^CEG] | [DFA]||
+</div>
+
+<p>このように和音の機能は調の中で決まる。同じ機能を持つ和音（ハ長調での G7、ト長調での D7、ニ短調での A7）を同じ名前で表すため、それぞれの調の中で対応する和音に同じ名前をつける。これが和音記号である。</p>
+</aside>
+
+<h3>(1) 三和音</h3>
+
+<aside>
+<p>準備（音階構成音）</p>
+<p>音階の第1音を<b>主音</b>と呼ぶ。主音を i と表し、第2, 第3,…音を ii, iii, ... と表す。</p>
+<p>主音の5度上の音を<b>属音</b>、5度下の音を<b>下属音</b>と呼ぶ。</p>
+<p>主音の半音下の音を<b>導音</b>と呼ぶ。</p>
+<p>（例）ハ長調では、主音はド、属音はソ、下属音はファ、導音はシ。</p>
+<p>（例）ト長調では、主音はソ、属音はレ、下属音はド、導音はファ＃。</p>
+<p>（例）ニ短調では、主音はレ、属音はラ、下属音はソ、導音はド＃。</p>
+</aside>
+
+<p>ある調において主音を根音とする三和音を I と呼び、以下同様に II, III, ...と呼ぶ。</p>
+<aside>
+<p>ハ長調での I 〜 VII</p>
+<div class="score">
+L:1
+K:C
+"I"[CEG]"II"[DFA]"III"[EGB]"IV"[FAc]"V"[GBd]"VI"[Ace]"VII"[Bdf]
+</div>
+<p>ト長調での I 〜 VII</p>
+<div class="score">
+L:1
+K:G
+"I"[GBd]"II"[Ace]"III"[Bdf]"IV"[ceg]"V"[dfa]"VI"[egb]"VII"[fac']
+</div>
+<p>ニ短調での I 〜 VII。和声短音階であり、ソに♯がついている。<br>短調の和音・和声は和声短音階で考える。</p>
+<div class="score">
+L:1
+K:F
+"I"[DFA]"II"[EGB]"III"[FA^c]"IV"[GBd]"V"[A^ce]"VI"[Bdf]"VII"[^ceg]
+</div>
+</aside>
+
+<p>I を<dfn>主和音</dfn>、IV を<dfn>下属和音</dfn>、V を<dfn>属和音</dfn>と呼び、この3つを<dfn>主要三和音</dfn>と呼ぶ。</p>
+<p>その他の三和音を<dfn>副三和音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>ハ長調での主要三和音 I, IV, V</p>
+<div class="score">
+L:1
+K:C
+"I"[CEG]"IV"[FAc]"V"[GBd]
+</div>
+
+<p>ト長調での主要三和音 I, IV, V</p>
+<div class="score">
+L:1
+K:G
+"I"[GBd]"IV"[ceg]"V"[dfa]
+</div>
+
+<p>ニ短調での主要三和音 I, IV, V</p>
+<div class="score">
+L:1
+K:F
+"I"[DFA]"IV"[GBd]"V"[A^ce]
+</div>
+</aside>
+
+<h3>(2) 七の和音・九の和音</h3>
+
+<p>七の和音は I<sub>7</sub>、II<sub>7</sub> のように 7 をつけて表す。九の和音も同様に 9 をつけて表す。</p>
+
+<aside>
+<p>ハ長調での七の和音 I<sub>7</sub> 〜 VII<sub>7</sub> と、九の和音 I<sub>9</sub> 〜 VII<sub>9</sub></p>
+<div class="score">
+L:1
+K:C
+"I7"[CEGB]"II7"[DFAc]"III7"[EGBd]"IV7"[FAce]"V7"[GBdf]"VI7"[Aceg]"VII7"[Bdfa]
+"I9"[CEGBd]"II9"[DFAce]"III9"[EGBdf]"IV9"[FAceg]"V9"[GBdfa]"VI9"[Acegb]"VII9"[Bdfac']
+</div>
+</aside>
+
+<p>V<sub>7</sub> を<dfn>属七の和音</dfn>と呼ぶ。その他の七の和音を<dfn>副七の和音</dfn>と呼ぶ。</p>
+<aside>
+<p>V<sub>7</sub>は「長三和音＋短3度」の構成になっている（他の I<sub>7</sub> 〜 VII<sub>7</sub> はそうなっていない）。「長三和音＋短3度」の和音を一般に「属七の和音」と呼ぶのはこのためである。</p>
+</aside>
+
+<aside>
+<p>練習：ニ短調での、次の和音の和音記号を答えよ。
+<div class="score">
+L:1
+K:F
+V:1
+"1."[Af] || "2." [A^cf] || "3." [FB] || "4." [^CB] ||
+V:2 bass
+ [D,D]   ||       [F,^C] || [G,,D,]  ||   [A,,G,]||
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>構成音を整理する。</p>
+<div class="score">
+L:1
+K:F
+"1."[DFA] || "2." [FA^c] || "3." [GBdf] || "4." [A^cgb] ||
+</div>
+
+<ol>
+<li>主音 D を根音とする三和音なので、 I
+<li>第3音 F を根音とする三和音なので、 III
+<li>第4音 G を根音とする七の和音なので、 IV<sub>7</sub>
+<li>第5音 A を根音とする九の和音なので、 V<sub>9</sub>
+</ol>
+<p>4つとも根音 = 最低音になっているので、和音の転回はない。</p>
+</div>
+</aside>
+
+<h3>(3) 転回形</h3>
+
+
+<style>
+sub[data-sup]:before {
+ content: attr(data-sup);
+ position: relative;
+ top: -.9em; right: 0;
+ width: 0;
+ display: inline-block;
+}
+</style>
+<p>転回形の和音は I<sup>1</sup>, I<sup>2</sup>のように転回指数を右上につけて表す。</p>
+<p>　</p>
+<p>別の記法として、六の和音を I<sub>6</sub> 、四六の和音を I<sub data-sup="6">4</sub> など、名称にしたがって表す伝統的表記もある。</p>
+
+<aside>
+<p>転回指数による表記と伝統的表記の比較を示す。</p>
+<p>日本国内では転回指数による表記が一般的だが、海外では伝統的表記が主流である。</p>
+<style>
+table.inversion_symbol td {
+ text-align: center;
+ vertical-align: middle;
+}
+table.inversion_symbol .score {
+ height:110px !important;
+ width: 90px !important;
+}
+@media screen and (max-width: 480px) {
+ table.inversion_symbol {
+  margin-left: 0;
+ }
+ table.inversion_symbol .score {
+  transform-origin: left center;
+ }
+}
+</style>
+<p>ハ長調 主和音 I</p>
+<div class="scroll">
+<table class="fig inversion_symbol">
+<tr><td> <td>指数表記<td>伝統表記
+<tr>
+<td>
+<div class="score">
+L:1
+K:C
+[CEG]
+</div>
+<td>I
+<td>I
+<tr>
+<td>
+<div class="score">
+L:1
+K:C
+[EGc]
+</div>
+<td>I<sup>1</sup>
+<td>I<sub>6</sub>
+<tr>
+<td>
+<div class="score">
+L:1
+K:C
+[Gce]
+</div>
+<td>I<sup>2</sup>
+<td>I<sub data-sup="6">4</sub>
+</table>
+</div>
+
+<p>ハ長調 属七の和音 V<sub>7</sub></p>
+<div class="scroll">
+<table class="fig inversion_symbol">
+<tr><td><td>指数表記<td>伝統表記
+<tr>
+<td>
+<div class="score">
+L:1
+K:C
+[G,B,DF]
+</div>
+<td>V<sub>7</sub>
+<td>V<sub>7</sub>
+<tr>
+<td>
+<div class="score">
+L:1
+K:C
+[B,DFG]
+</div>
+<td>V<sub data-sup="1">7</sub>
+<td>V<sub data-sup="6">5</sub>
+<tr>
+<td>
+<div class="score">
+L:1
+K:C
+[DFGB]
+</div>
+<td>V<sub data-sup="2">7</sub>
+<td>V<sub data-sup="4">3</sub>
+<tr>
+<td>
+<div class="score">
+L:1
+K:C
+[FGBd]
+</div>
+<td>V<sub data-sup="3">7</sub>
+<td>V<sub>2</sub>
+</table>
+</div>
+
+</aside>
+
+<aside>
+<p>練習：嬰ヘ短調での、次の和音の和音記号を答えよ。
+<div class="score">
+L:1
+K:A
+V:1
+"1."[Acf] || "2." [CGc] || "3." [B,FGd] || "4." [^EGB^e] ||
+V:2 bass
+[F,] || [^E,,^E,] || [D,F,] || [D,B,] ||
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>構成音を整理する。</p>
+<div class="score">
+L:1
+K:A
+"1."[FAc] || "2." [C^EG] || "3." [GBdf] || "4." [^EGBd] ||
+</div>
+
+<ol>
+<li>主音 Fis を根音とする三和音なので I。正解はそのまま I 。
+<li>第5音 Cis を根音とする三和音なので V。正解はその第2転回形で V<sup>2</sup>（ V<sub data-sup="6">4</sub>）。
+<li>第2音 Gis を根音とする七の和音なので II<sub>7</sub> 。正解はその第2転回形で II<sub data-sup="2">7</sub>（ II<sub data-sup="4">3</sub>）。
+<li>第7音 Eis を根音とする七の和音なので VII<sub>7</sub>。正解はその第3転回形で VII<sub data-sup="3">7</sub>（ VII<sub>2</sub>）。
+</ol>
+</div>
+</aside>
+
+
+
+<script>
+var scoreObj = document.getElementsByClassName("score");
+if (scoreObj) {
+ for( var i in scoreObj ){
+  ABCJS.renderAbc( scoreObj[i], scoreObj[i].innerHTML,{staffwidth:300} );
+ }
+}
+</script>
+<script>maketoc()</script>

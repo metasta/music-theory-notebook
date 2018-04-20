@@ -1,0 +1,167 @@
+:root {
+ --family: 'Hiragino Sans',sans-serif;
+ --weight: 200;
+ --width: 960px;
+}
+html {
+ font: var(--weight) 12pt/1.8 var(--family);
+ color: #333;
+}
+body {
+ margin: 0 auto 10em auto;
+ max-width: var(--width);
+ padding: 0 1em;
+}
+h1 {
+ margin-top: 3em;
+ margin-bottom: 5em;
+}
+h2 {
+ counter-increment: section;
+}
+h2:before {
+ content: "§"counter(section)" ";
+}
+h2.nonum:before {
+ content: "";
+}
+h3 {
+ font-size: 100%;
+ margin: 1em 0 0 0;
+}
+section {
+ box-sizing: border-box;
+ margin: 2em 0;
+ border: 3px double #333;
+ padding: 1em 2em;
+}
+section.minor {
+ border: 1px solid #666;
+ padding: calc(1em + 2px) calc(2em + 2px);
+}
+aside {
+ font: 12pt/2 'HiraMaruProN-W4';
+ color: #666;
+ box-sizing: border-box;
+ margin: 2em;
+ border: 1px solid #aaa;
+ border-radius: 5px;
+ padding: 2em;
+}
+@media screen and (max-width: 480px) {
+ aside {
+  font-size: 10.5pt;
+  margin: 2em 0;
+  padding: 2em 1em;
+ }
+ .score {
+  transform-origin: left top;
+  transform:scale(0.77);
+ }
+}
+
+p {
+ margin: 0;
+}
+ol, ul {
+ margin-left: 1em;
+}
+nav ol {
+ margin-left: 0;
+ padding-left: 0;
+ list-style: none;
+}
+nav > ol ol {
+ padding-left: 1em;
+}
+a {
+ text-decoration:inherit;
+ color: #0ae;
+}
+strong,b {
+ font-weitht: bold;
+ font-family: var(--family);
+}
+em {
+ font-style: normal;
+ text-emphasis: dot filled;
+ -webkit-text-emphasis: dot filled;
+}
+ruby rt {
+ font-weight: var(--weight);
+}
+dfn {
+ font-weight: bold;
+ font-style: normal;
+ font-family: var(--family);
+ white-space: nowrap;
+}
+table {
+ border-collapse: collapse;
+ margin: 1em;
+}
+table th,
+table td {
+ vertical-align: top;
+}
+table th {
+ text-align: inherit;
+}
+table.fig {
+ margin-left: 2em;
+}
+table.fig td:not(:first-child),
+table.fig th:not(:first-child){
+ padding-left: 1em;
+}
+tr.u td,
+tr.u th {
+ border-bottom: 1px solid #333;
+}
+nav#header {
+ width: 100%;
+ height: 2em;
+}
+nav#header ul {
+ margin: 0 auto;
+ max-width: var(--width);
+ padding: 0;
+}
+nav#header li {
+ display: inline-block;
+ padding: 0;
+ line-height: 2.5em;
+}
+nav#header li:not(:first-child):before {
+ padding-left: .5em;
+ content: "» ";
+ color: #aaa;
+}
+.scroll {
+ overflow: auto;
+ white-space: nowrap;
+}
+
+input[type="checkbox"] {
+ font: 200 10pt/1.8em var(--family);
+ color: inherit;
+ margin: 0;
+ height: 1.8em;
+ vertical-align: middle;
+}
+input.ans {
+ width: 6em;
+}
+input.ans:before {
+ content: "正解を見る";
+ position: relative;
+ left: 1.5em;
+}
+input.ans + div {
+ display: none;
+}
+input.ans:checked + div {
+ display: block;
+}
+
+
