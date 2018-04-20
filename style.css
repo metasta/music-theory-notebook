@@ -145,17 +145,14 @@ nav#header li:not(:first-child):before {
 input[type="checkbox"] {
  font: 200 10pt/1.8em var(--family);
  color: inherit;
- margin: 0;
+ margin: 0 0 0 1em;
+ padding: 0;
  height: 1.8em;
  vertical-align: middle;
+ white-space: nowrap;
 }
-input.ans {
- width: 6em;
-}
-input.ans:before {
- content: "正解を見る";
- position: relative;
- left: 1.5em;
+input.ans:after {
+ content: "　　正解を見る";
 }
 input.ans + div {
  display: none;
