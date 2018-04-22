@@ -8,8 +8,8 @@
 
 <nav id="header">
 <ul>
-<li>音楽理論ノート
-<li>音律
+<li><a href=".">音楽理論ノート</a>
+<li><a href="">音律</a>
 </ul>
 </nav>
 
@@ -96,12 +96,14 @@ K:C
 <aside>
 <p>純正律（長音階）の三和音</p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
 K:C
-"I"[CEG]"IV"[FAc]"V"[GBd]||"II※"[DFA]"III"[EGB]"VI"[Ace]
+[CEG] [FAc] [GBd] || "※" [DFA] [EGB] [Ace]
+w: C:~I IV V | II III VI
 </div>
 <p>長三和音 I, IV, V はすべて周波数比 4:5:6 となる。</p>
-<p>短三和音 II, III, VI のうち III と VI は 10:12:15（純正短三和音）となるが、II（レファラ）は 27:32:40 となる。</p>
+<p>短三和音 II, III, VI のうち III と VI は 10:12:15（純正短三和音）となるが、II（※、レファラ）は 27:32:40 となる。</p>
 </aside>
 
 <aside>
@@ -109,27 +111,20 @@ K:C
 <p>純正律の D と A の音程は純正とならない。これは D を G の 完全5度上として定めるのに対し、A を F の長3度上として定めるためである。この結果 D-A の音程は純正な完全5度より約21.5セント狭くなる。このずれをシントニックコンマと呼ぶ。</p>
 </aside>
 
-<p>純正律では I, IV, V の長三和音および III, VI の短三和音が純正音程となり澄んだ響きを得られる。一方 D-A は純正な完全5度より約21.5セント狭いため、この音程を含む和音は非常に響きが悪い。さらに大全音と小全音が存在するため調ごとに調律が異なる。これらの理由から純正律では転調や移調が困難である。</p>
+<p>純正律では I, IV, V の長三和音および III, VI の短三和音が純正音程となり澄んだ響きを得られる。一方 ii - vi （レ - ラ）は純正な完全5度より約21.5セント狭いため、この音程を含む和音は非常に響きが悪い。さらに大全音と小全音が存在するため調ごとに調律が異なる。これらの理由から純正律では転調や移調が困難である。</p>
 
 <aside>
 <p>自然短音階の純正律
-<p>I（ラ）を基準に IV（レ）を定めるため、長音階と比べてレの音が低くなる。</p>
+<p>i（ラ）を基準に iv（レ）を定めるため、長音階と比べてレの音が約21.5セント低くなる。</p>
 <div class="scroll">
 <table class="fig temperament">
 <tr><td>音名<td>A<td>B<td>C<td>D<td>E<td>F<td>G<td>A
 <tr><td>比率<td>1<td>9/8<td>6/5<td>4/3<td>3/2<td>8/5<td>9/5<td>2
-<tr><td>純正律との差<td>0.000<td>0.000<td>0.000<td>-21.51<td>0.000<td>0.000<td>0.000<td>0.000
-<tr><td>平均律との差<td>0.000<td>+7.820<td>+15.64<td>-1.955<td>+1.955<td>+13.69<td>+17.60<td>0.000
+<tr><td>純正律とのセント差<td>0.000<td>0.000<td>0.000<td>-21.51<td>0.000<td>0.000<td>0.000<td>0.000
+<tr><td>平均律とのセント差<td>0.000<td>+7.820<td>+15.64<td>-1.955<td>+1.955<td>+13.69<td>+17.60<td>0.000
 </table>
 </div>
 
-<div class="score">
-L:1
-K:C
-"I"[A,CE]"IV"[DFA]"V"[EGB] || "III"[CEG]"VI"[FAc]"VII※"[GBd]
-</div>
-<p>短三和音 I, IV, V はすべて周波数比 10:12:15 となる。</p>
-<p>長三和音 III, VI, VII のうち III と VI は 4:5:6 となるが、VII（ソシレ）は 108:135:160 となる。</p>
 </aside>
 
 <aside>
@@ -152,6 +147,7 @@ K:C
 
 <p>この半音階は4つの純正完全5度の積み重ね F-C-G-D を上下に純正長3度ずつ移動することで得られる。</p>
 <div class="score">
+%%score {1 | 2}
 L:1
 K:C
 V:1
@@ -238,11 +234,6 @@ K:C
 <p>平均律は完全1度と完全8度を除き純正な音程にならないが、全ての調で均質な響きが得られ、転調や移調を自由に行うことができる。</p>
 
 <script>
-var scoreObj = document.getElementsByClassName("score");
-if (scoreObj) {
- for( var i in scoreObj ){
-  ABCJS.renderAbc( scoreObj[i], scoreObj[i].innerHTML,{staffwidth:300} );
- }
-}
+renderabc();
+maketoc();
 </script>
-<script>maketoc()</script>

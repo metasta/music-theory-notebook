@@ -3,13 +3,13 @@
 <meta name="viewport" content="initial-scale=1.0">
 <title>和音</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 <script src="abcjs_basic_4.0.0-min.js"></script>
+<script src="script.js"></script>
 
 <nav id="header">
 <ul>
-<li>音楽理論ノート
-<li>和音
+<li><a href=".">音楽理論ノート</a>
+<li><a href="">和音</a>
 </ul>
 </nav>
 
@@ -21,7 +21,7 @@
 
 <h2>和音の種類</h2>
 
-<h3>(1) 三和音</h3>
+<h3>三和音</h3>
 
 <p>ある音（<dfn>根音</dfn>）の上に3度と5度の音を重ねた和音を<dfn>三和音</dfn>と呼ぶ。</p>
 <p>3度の音を<dfn>第3音</dfn>、5度の音を<dfn>第5音</dfn>と呼ぶ。</p>
@@ -60,7 +60,7 @@ K:C
 </ul>
 </aside>
 
-<h3>(2) <ruby>七<rt>しち</ruby>の和音</h3>
+<h3 title="七の和音"><ruby>七<rt>しち</ruby>の和音</h3>
 <p>三和音に7度の音（<dfn>第7音</dfn>）を重ねた4つの音からなる和音を<dfn><ruby>七<rt>しち</ruby>の和音</dfn>と呼ぶ。</p>
 
 <div class="score">
@@ -112,7 +112,7 @@ K:C
 <p>なぜ「長三和音＋短3度」の和音を「属七の和音」と呼ぶのかは後述する。</p>
 </aside>
 
-<h3>(3) 九の和音</h3>
+<h3>九の和音</h3>
 
 <p>七の和音にさらに9度の音を重ねた計5つの音からなる和音を<dfn>九の和音</dfn>と呼ぶ。</p>
 <p>属七の和音＋長3度からなる<dfn>属九の和音</dfn>がよく用いられる。</p>
@@ -124,7 +124,7 @@ K:C
 </div>
 
 <aside>
-<p>なお、4音で九の和音を表現する場合は第5音が省略される。</p>
+<p>なお、4つの音で九の和音を表現する場合は第5音が省略される。</p>
 <div class="score">
 L:1
 K:C
@@ -148,7 +148,7 @@ K:C
 [CEG_B] || [CEG_Bc]
 </div>
 
-<p>音を省略することもできる。5音が省略されることが多い。</p>
+<p>音を省略することもできる。第5音が省略されることが多い。</p>
 <div class="score">
 L:1
 K:C
@@ -162,7 +162,7 @@ K:C
 <p>同じ構成音からなる和音でも、一番下に来る音が変わると多少性格が変化する。</p>
 <p>根音を最低音とする形を<dfn>基本形</dfn>と呼び、根音以外を最低音とする形を<dfn>転回形</dfn>と呼ぶ。</p>
 
-<h3>(1) 三和音の転回</h3>
+<h3>三和音の転回</h3>
 
 <aside>
 <p>三和音の基本形の例</p>
@@ -201,7 +201,7 @@ K:C
 <p>第5音（ソ）が最低音なので、これらはすべて第2転回形である。</p>
 <p>根音（ド）、第3音（ミ）が最低音（ソ）の4,6度上にあるため四六の和音と呼ばれる。</p>
 </aside>
-<h3>(2) 七の和音の転回</h3>
+<h3>七の和音の転回</h3>
 <p>三和音と同様、七の和音にも基本形、第1転回形、第2転回形、さらに<dfn>第3転回形</dfn>が存在する。</p>
 <p>七の和音の第1〜第3転回形を、その構成からそれぞれ<dfn>五六の和音</dfn>､ <dfn>三四の和音</dfn>､ <dfn>二の和音</dfn>と呼ぶ。</p>
 
@@ -219,7 +219,7 @@ K:C
 <p>なお (3) の例では第5音（ソ）が省略されている。</p>
 </aside>
 
-<h3>(3) 九の和音の転回</h3>
+<h3>九の和音の転回</h3>
 <p>三和音や七の和音と同様、九の和音にも転回形がある。</p>
 
 <aside>
@@ -235,6 +235,7 @@ K:C
 <aside>
 <p>練習：次の和音の種類（長三和音、短三和音、…）と転回形（基本形、第1、第2、…）を答えよ。</p>
 <div class="score">
+%%score {1 | 2}
 L:1
 K:C
 V:1
@@ -271,29 +272,29 @@ K:C
 
 <aside>
 <p>和音は曲の中で様々な働きを担う。</p>
-<p>たとえば「ドミナント機能」という機能がある。これはハ長調の曲においてはソを根音とする属七の和音（G7）が持つ機能で、ドを根音とする長三和音（C）に進もうとする強い性質のことを指す。（G7 → C）</p>
+<p>たとえば「ドミナント」という機能がある。これはハ長調の曲においてはソを根音とする属七の和音（G7）が持つ機能で、ドを根音とする長三和音（C）に進もうとする強い性質のことを指す。（G7 → C）</p>
 <div class="score">
 L:1
 K:C
-"G7"[G,B,DF] | "C"[CEG]||
+"G7"[G,B,DF] | "C"[CEG] ||
 </div>
-<p>ト長調ではドミナント機能を持つのはレを根音とする属七の和音（D7）であり、同様にソを根音とする長三和音（G）に進もうとする。（D7 → G）</p>
+<p>ト長調でドミナントの機能を持つのはレを根音とする属七の和音（D7）であり、同様にソを根音とする長三和音（G）に進もうとする。（D7 → G）</p>
 <div class="score">
 L:1
 K:G
-[DFAc] | [GBd]||
+"D7"[DFAc] | "G"[GBd] ||
 </div>
-<p>あるいはまたニ短調であれば、ドミナント機能を持つのは A7 であり、Dm へと進もうとする。（A7 → Dm）</p>
+<p>あるいはまたニ短調であれば、ドミナントの機能を持つのは A7 であり、Dm へと進もうとする。（A7 → Dm）</p>
 <div class="score">
 L:1
 K:F
-[A,^CEG] | [DFA]||
+"A7"[A,^CEG] | "D"[DFA]||
 </div>
 
 <p>このように和音の機能は調の中で決まる。同じ機能を持つ和音（ハ長調での G7、ト長調での D7、ニ短調での A7）を同じ名前で表すため、それぞれの調の中で対応する和音に同じ名前をつける。これが和音記号である。</p>
 </aside>
 
-<h3>(1) 三和音</h3>
+<h3>三和音の記号</h3>
 
 <aside>
 <p>準備（音階構成音）</p>
@@ -309,21 +310,27 @@ K:F
 <aside>
 <p>ハ長調での I 〜 VII</p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
 K:C
-"I"[CEG]"II"[DFA]"III"[EGB]"IV"[FAc]"V"[GBd]"VI"[Ace]"VII"[Bdf]
+[CEG] [DFA] [EGB] [FAc] [GBd] [Ace] [Bdf]
+w: C:~I II III IV V VI VII
 </div>
 <p>ト長調での I 〜 VII</p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
 K:G
-"I"[GBd]"II"[Ace]"III"[Bdf]"IV"[ceg]"V"[dfa]"VI"[egb]"VII"[fac']
+[GBd] [Ace] [Bdf] [ceg] [dfa] [egb] [fac']
+w: G:~I II III IV V VI VII
 </div>
 <p>ニ短調での I 〜 VII。和声短音階であり、ソに♯がついている。<br>短調の和音・和声は和声短音階で考える。</p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
-K:F
-"I"[DFA]"II"[EGB]"III"[FA^c]"IV"[GBd]"V"[A^ce]"VI"[Bdf]"VII"[^ceg]
+K:Dm
+[DFA] [EGB] [FA^c] [GBd] [A^ce] [Bdf] [^ceg]
+w: d:~I II III IV V VI VII
 </div>
 </aside>
 
@@ -333,37 +340,46 @@ K:F
 <aside>
 <p>ハ長調での主要三和音 I, IV, V</p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
 K:C
-"I"[CEG]"IV"[FAc]"V"[GBd]
+[CEG] [FAc] [GBd]
+w: C:~I IV V
 </div>
 
 <p>ト長調での主要三和音 I, IV, V</p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
 K:G
-"I"[GBd]"IV"[ceg]"V"[dfa]
+[GBd] [ceg] [dfa]
+w: G:~I IV V
 </div>
 
 <p>ニ短調での主要三和音 I, IV, V</p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
 K:F
-"I"[DFA]"IV"[GBd]"V"[A^ce]
+[DFA] [GBd] [A^ce]
+w: d:~I IV V
 </div>
 </aside>
 
-<h3>(2) 七の和音・九の和音</h3>
+<h3>七の和音・九の和音の記号</h3>
 
 <p>七の和音は I<sub>7</sub>、II<sub>7</sub> のように 7 をつけて表す。九の和音も同様に 9 をつけて表す。</p>
 
 <aside>
 <p>ハ長調での七の和音 I<sub>7</sub> 〜 VII<sub>7</sub> と、九の和音 I<sub>9</sub> 〜 VII<sub>9</sub></p>
 <div class="score">
+%%vocalfont Helvetica 11pt
 L:1
 K:C
-"I7"[CEGB]"II7"[DFAc]"III7"[EGBd]"IV7"[FAce]"V7"[GBdf]"VI7"[Aceg]"VII7"[Bdfa]
-"I9"[CEGBd]"II9"[DFAce]"III9"[EGBdf]"IV9"[FAceg]"V9"[GBdfa]"VI9"[Acegb]"VII9"[Bdfac']
+[CEGB] [DFAc] [EGBd] [FAce] [GBdf] [Aceg] [Bdfa]
+w: C:~I7 II7 III7 IV7 V7 VI7 VII7
+[CEGBd] [DFAce] [EGBdf] [FAceg] [GBdfa] [Acegb] [Bdfac']
+w: C:~I9 II9 III9 IV9 V9 VI9 VII9
 </div>
 </aside>
 
@@ -375,6 +391,7 @@ K:C
 <aside>
 <p>練習：ニ短調での、次の和音の和音記号を答えよ。
 <div class="score">
+%%score {1 | 2}
 L:1
 K:F
 V:1
@@ -401,8 +418,7 @@ K:F
 </div>
 </aside>
 
-<h3>(3) 転回形</h3>
-
+<h3>転回形の記号</h3>
 
 <style>
 sub[data-sup]:before {
@@ -520,21 +536,22 @@ K:C
 </aside>
 
 <aside>
-<p>練習：嬰ヘ短調での、次の和音の和音記号を答えよ。
+<p>練習：嬰ヘ短調での、次の和音の和音記号を答えよ。転回形は指数表記でも伝統的表記でもよい。</p>
 <div class="score">
+%%score {1 | 2}
 L:1
-K:A
+K:F#m
 V:1
-"1."[Acf] || "2." [CGc] || "3." [B,FGd] || "4." [^EGB^e] ||
+"1."[Acf] || "2." [^EGc] || "3." [B,FGd] || "4." [^EG^e] ||
 V:2 bass
-[F,] || [^E,,^E,] || [D,F,] || [D,B,] ||
+[F,] || [G,,G,] || [D,F,] || [D,B,] ||
 </div>
 <input type="checkbox" class="ans">
 <div>
 <p>構成音を整理する。</p>
 <div class="score">
 L:1
-K:A
+K:F#m
 "1."[FAc] || "2." [C^EG] || "3." [GBdf] || "4." [^EGBd] ||
 </div>
 
@@ -548,13 +565,7 @@ K:A
 </aside>
 
 
-
 <script>
-var scoreObj = document.getElementsByClassName("score");
-if (scoreObj) {
- for( var i in scoreObj ){
-  ABCJS.renderAbc( scoreObj[i], scoreObj[i].innerHTML,{staffwidth:300} );
- }
-}
+renderabc();
+maketoc();
 </script>
-<script>maketoc()</script>
