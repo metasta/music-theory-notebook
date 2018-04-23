@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<title>非和声音</title>
+<link rel="stylesheet" href="style.css">
+<script src="abcjs_basic_4.0.0-min.js"></script>
+<script src="script.js"></script>
+
+<nav id="header">
+<ul>
+<li><a href=".">音楽理論ノート</a>
+<li><a href="">非和声音</a>
+</ul>
+</nav>
+
+<h1>非和声音</h1>
+
+<p>和音の構成音でない音を<dfn>非和声音</dfn>あるいは<dfn>和声外音</dfn>と呼ぶ。</p>
+
+<nav id="table-of-contents"></nav>
+
+<h2>いろいろな非和声音</h2>
+
+<h3>経過音</h3>
+<p>和声音から順次進行して非和声音となり、さらに同じ方向に順次進行して再び和声音となる音を<dfn>経過音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>経過音</p>
+<div class="score">
+%%score {(S A) | (T B)}
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+M:C
+V:S
+c1/4 "*"d1/4 e1/2 ||
+V:A
+G ||
+V:T bass
+C ||
+V:B bass
+C, ||
+w:C:~I
+</div>
+</aside>
+
+<aside>
+<p>経過音の後の和音は前の和音と別でも良い。</p>
+</aside>
+
+<h3>刺繡音</h3>
+<p>和声音から順次進行して非和声音となり、元の高さに戻って再び和声音となる音を<dfn>刺繡音</dfn>あるいは<dfn>輔助音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>刺繡音</p>
+<div class="score">
+%%score {(S A) | (T B)}
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+M:C
+V:S
+e1/4 "*"f1/4 e1/2 ||
+V:A
+G ||
+V:T bass
+C ||
+V:B bass
+C, ||
+w:C:~I
+</div>
+</aside>
+
+<aside>
+<p>経過音と同じく、刺繡音の後の和音は前の和音と別でも良い。</p>
+</aside>
+
+<h3>先取音</h3>
+<p>和音が変わる直前に次の和音の構成音と同音で現れる非和声音を<dfn>先取音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>先取音</p>
+<div class="score">
+%%score {(S A) | (T B)}
+%%vocalfont Helvetica 11pt
+L:1/2
+K:C
+M:C
+V:S
+G G ||
+V:A
+D1/2 "*"E1/2 E ||
+V:T bass
+B, C ||
+V:B bass
+G, C, ||
+w:C:~V I
+</div>
+</aside>
+
+<h3 title="逸音"><ruby>逸<rt>いつ</rt>音<rt>おん</ruby></h3>
+<p>和声音から順次進行して非和声音となり、跳躍して次の和音の和声音となる音を<dfn><ruby>逸<rt>いつ</rt>音<rt>おん</ruby></dfn>と呼ぶ。</p>
+
+<aside>
+<p>逸音</p>
+<div class="score">
+%%score {(S A) | (T B)}
+%%vocalfont Helvetica 11pt
+L:1/2
+K:C
+M:C
+V:S
+d1/2 "*"e1/2 c ||
+V:A
+F E ||
+V:T bass
+B, C ||
+V:B bass
+G,, C, ||
+w:C:~V7 I
+</div>
+</aside>
+
+<h3 title="掛留音"><ruby>掛<rt>けい</rt>留<rt>りゅう</rt>音<rt>おん</ruby></h3>
+<p>前の和音の構成音が次の和音まで延長された結果非和声音となる音を<dfn><ruby>掛<rt>けい</rt>留<rt>りゅう</rt>音<rt>おん</ruby></dfn>と呼ぶ。</p>
+
+<aside>
+<p>掛留音</p>
+<div class="score">
+%%score {(S A) | (T B)}
+%%vocalfont Helvetica 11pt
+L:1/2
+K:C
+M:C
+V:S
+d-"*"d1/2 c1/2 ||
+V:A
+F E ||
+V:T bass
+B, C ||
+V:B bass
+G,, C, ||
+w:C:~V7 I
+</div>
+</aside>
+
+<aside>
+<p>「掛留」という語を見慣れず「係留（繋留）」あるいは「稽留」の書き換えかとも思ったのだが、「掛留」で正しいようだ。</p>
+</aside>
+
+<h3 title="倚音"><ruby>倚<rt>い</rt>音<rt>おん</ruby></h3>
+<p>和音が始まると同時に非和声音として現れ、同じ和音内で和声音へ順次進行する音を<dfn><ruby>倚<rt>い</rt>音<rt>おん</ruby></dfn>と呼ぶ。</p>
+
+<aside>
+<p>倚音</p>
+<div class="score">
+%%score {(S A) | (T B)}
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+M:C
+V:S
+"*"d1/2 c1/2 ||
+V:A
+E ||
+V:T bass
+G, ||
+V:B bass
+C, ||
+w:C:~I
+</div>
+</aside>
+
+<aside>
+<p>「倚」はよりかかる意。順次進行して和声音に戻る様子が和音によりかかるように感じられるからだろうか。</p>
+</aside>
+
+<h3>保続音</h3>
+<p>他の声部が変化しても同高で伸ばし続ける音を<dfn>保続音</dfn>と呼ぶ。</p>
+<p>保続音は多くバスに現れる。バスが保続音を伸ばしている間はその音を根音とする和音が持続していると解釈される。</p>
+
+<aside>
+<p>保続音</p>
+<div class="score">
+%%score {(S A) | (T B)}
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+M:C
+V:S
+G1/4 "*"F1/4 E1/4 "*"D1/4 ||
+V:A
+E1/4 D1/4 C1/4 B,1/4 ||
+V:T bass
+C1/4 G,1/4 G,1/4 F,1/4 ||
+w:C:~I
+V:B bass
+C, ||
+</div>
+</aside>
+
+<aside>
+<p>保続音は他の非和声音とは異質である。特にバスの保続音の場合、非和声音となるのはバスではなく上三声であると解釈される。</p>
+</aside>
+
+<aside>
+<p>雑な要約</p>
+<ul>
+<li>バスが同音で伸ばし続けたら保続音
+<li>いきなり非和声音だったら倚音
+<li>前の和音から持続してたら掛留音
+<li>次の和音の前触れだったら先取音
+<li>跳躍したら逸音
+<li>別の音へ進んだら経過音
+<li>元の音へ戻ったら刺繡音
+</ul>
+<p>実例が大事</p>
+</aside>
+
+<script>
+renderabc();
+maketoc();
+</script>
