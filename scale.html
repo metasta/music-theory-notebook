@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<title>音階</title>
+<link rel="stylesheet" href="style.css">
+<script src="abcjs_basic_4.0.0-min.js"></script>
+<script src="script.js"></script>
+
+<nav id="header">
+<ul>
+<li><a href=".">音楽理論ノート</a>
+<li><a hfef="">音階</a>
+</ul>
+</nav>
+
+<h1>音階</h1>
+
+<p>楽音を高低の順に並べた列を<dfn>音階</dfn>と呼ぶ。</p>
+
+<nav id="table-of-contents"></nav>
+
+<h2>長音階</h2>
+
+<h3>音階構成音</h3>
+<p>長音階（および短音階）の構成音を下から順に第 i 〜 第 vii 音と呼ぶ。</p>
+<p>i を<dfn>主音</dfn>、i の完全5度上の v を<dfn>属音</dfn>、i の完全5度下の iv を<dfn>下属音</dfn>、i の半音下の vii を<dfn>導音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>ほか、第 ii 音を上主音（主音 i の上の音）、第 iii 音を中音（主音 i と属音 v の中間）、第 vi 音を下中音（下属音と主音の中間）と呼ぶ。</p>
+<p>音階によって vii が i の半音下ではない場合があり、その場合は vii を導音とは呼ばない。自然短音階の項を参照。</p>
+</aside>
+
+
+<h3>自然長音階</h3>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D E F G A B c
+w: C:~i ii iii iv v vi vii i
+</div>
+<p>1 octave を5つの全音と2つの半音で 全-全-半-全-全-全-半 の順に分割した音階を<dfn>自然長音階</dfn>と呼ぶ。</p>
+<p>通常、単に<dfn>長音階</dfn>と言えば自然長音階を指す。</p>
+<p>きわめて稀ながら、自然長音階の他に以下の長音階が用いられることがある。</p>
+
+<h3>和声長音階</h3>
+<p>vi 音が自然長音階より半音低い音階を<dfn>和声長音階</dfn>（Molldur）と呼ぶ。</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D E F G _A B c
+w: C:~i ii iii iv v vi vii i
+</div>
+
+<h3>旋律長音階</h3>
+<p>上行形は自然長音階と同じだが、下行形のみ vii, vi 音が自然長音階より半音低い音階を<dfn>旋律長音階</dfn>と呼ぶ。</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D E F G A B c
+w: C:~i ii iii iv v vi vii i
+c _B _A G F E D C
+w: C:~i vii vi v iv iii ii i
+</div>
+
+<h2>短音階</h2>
+<p>自然短音階、和声短音階、旋律短音階の3種類がある。</p>
+
+<h3>自然短音階</h3>
+<p>iii, vi, vii 音が自然長音階より半音低い音階を<dfn>自然短音階</dfn>と呼ぶ。</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D _E F G _A _B c
+w: c:~i ii iii iv v vi vii i
+</div>
+
+<p>自然短音階の構成音は、i の短3度上を主音とする自然長音階と同じである。</p>
+
+<p>自然短音階の vii 音は主音の長2度下であるため、導音ではなく<dfn>下主音</dfn>と呼ばれる。</p>
+
+<aside>
+<p>自然短音階には導音がないため終止感が弱い。</p>
+</aside>
+
+<h3>和声短音階</h3>
+<p>vii 音が自然短音階より半音高い音階を<dfn>和声短音階</dfn>と呼ぶ。</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D _E F G _A =B c
+w: c:~i ii iii iv v vi vii i
+</div>
+
+<aside>
+<p>和声短音階の vii 音は導音なので終止感が得られ、和声的に扱いやすい。</p>
+<p>しかし vi - vii の音程が増2度となるため旋律には適していない。</p>
+</aside>
+
+
+<h3>旋律短音階</h3>
+<p>下行形は自然短音階と同じだが、上行形のみ vi, vii 音が自然短音階より半音高い音階を<dfn>旋律短音階</dfn>と呼ぶ。</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D _E F G =A =B c
+w: c:~i ii iii iv v vi vii i
+c _B _A G F _E D C
+w: c:~i vii vi v iv iii ii i
+</div>
+
+<aside>
+<p>旋律短音階の上行形と自然長音階とは iii によってのみ区別される。</p>
+</aside>
+
+<h2>全音階</h2>
+<p>1 oct. を5つの全音と2つの半音に分割した音階を<dfn>全音階</dfn>と呼ぶ。</p>
+
+<aside>
+<p>自然長音階と自然短音階は全音階である。</p>
+</aside>
+
+<h3>教会旋法</h3>
+<p>中世のグレゴリオ聖歌で用いられた音階と旋律の規定を<dfn>教会旋法</dfn>と呼ぶ。教会旋法を起源とする全音階は以下の7つある。</p>
+<p>アイオニアン Ionian （自然長音階と同じ）</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D E F G A B c
+w: _ _ └ 半~┘ _ _ └ 半~┘
+</div>
+<p>ドリアン Dorian</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D _E F G A _B c
+w: _ └ 半~┘ _ _ └ 半~┘ _
+</div>
+<p>フリジアン Phrygian</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C _D _E F G _A _B c
+w: └ 半~┘ _ _ └ 半~┘ _ _
+</div>
+<p>リディアン lydian</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D E ^F G A B c
+w: _ _ _ └ 半~┘ _ └ 半~┘
+</div>
+<p>ミクソリディアン Mixolydian</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D E F G A _B c
+w: _ _ └ 半~┘ _ └ 半~┘ _
+</div>
+<p>エオリアン Aeolian （自然短音階と同じ）</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C D _E F G _A _B c
+w: _ └ 半~┘ _ └ 半~┘ _ _
+</div>
+<p>ロクリアン Locrian</p>
+<div class="score">
+%%vocalfont Helvetica 11pt
+L:1
+K:C
+V:1
+C _D _E F _G _A _B c
+w: └ 半~┘ _ └ 半~┘ _ _ _
+</div>
+
+<h2>半音階</h2>
+<p>12の半音からなる音階を<dfn>半音階</dfn>と呼ぶ。</p>
+<p>調性音楽に半音階を用いる場合、次の記譜法が一般的である。この記法を<dfn>旋律半音階</dfn>と呼ぶ。</p>
+
+<h3>旋律半音階（長調・上行）</h3>
+<ul>
+<li>長調の上行形では派生音を「下の音の半音上げ」として表すが、第 vi - vii 音のみ「vii の半音下げ」で表す。
+</ul>
+<aside>
+<p>例1：ハ長調</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:C
+C ^C D ^D E F ^F G ^G A "*"_B =B c
+</div>
+</div>
+<p>例2：イ長調</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:A
+A, ^A, B, ^B, C D ^D E ^E F "*"=G ^G A
+</div>
+</div>
+</aside>
+
+<aside>
+<p>上行形では＃系（次図左）の方が♭系（右）と比べて臨時記号が少なく済む。</p>
+<div class="score">
+L:1
+K:C
+"OK"F ^F G ^G A || "NG"F _G =G _A =A
+</div>
+</aside>
+
+<aside>
+<p>第 vi - vii 音が例外となるのは、下属調（iv 音を主音とする調）にこの音が現れるため。</p>
+<p>参考1：ヘ長調（ハ長調の下属調）</p>
+<div class="score">
+L:1
+K:C
+FGA"*"_Bcdef
+</div>
+<p>参考2：ニ長調（イ長調の下属調）</p>
+<div class="score">
+L:1
+K:A
+DEF"*"=GABcd
+</div>
+</aside>
+
+<h3>旋律半音階（長調・下行）</h3>
+<ul>
+<li>長調の下行形では派生音を「上の音の半音下げ」として表すが、第 v - iv 音のみ「iv 音の半音上げ」で表す。
+</ul>
+<aside>
+<p>例1：ハ長調</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:C
+c B _B A _A G "*"^F =F E _E D _D C
+</div>
+</div>
+<p>例2：変ホ長調</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:Eb
+e d _d c _c B "*"=A _A G _G F _F E
+</div>
+</div>
+</aside>
+
+<aside>
+<p>下行形では♭系（次図左）の方が♯系（右）と比べて臨時記号が少なく済む。</p>
+<div class="score">
+L:1
+K:C
+"OK"A _A G _G F || "NG"A ^G =G ^F =F
+</div>
+</aside>
+
+<aside>
+<p>第 v - iv 音が例外となるのは、属調（v 音を主音とする調）にこの音が現れるため。</p>
+<p>参考1：ト長調（ハ長調の属調）</p>
+<div class="score">
+L:1
+K:C
+g"*"^fedcBAG
+</div>
+<p>参考2：変ロ長調（変ホ長調の属調）</p>
+<div class="score">
+L:1
+K:Eb
+B"*"=AGFEDCB,
+</div>
+</aside>
+
+<h3>旋律半音階（短調）</h3>
+<ul>
+<li>短調の上行形は平行調の上行半音階と同じ。
+<li>短調の下行形は同主調の下行半音階と同じ。
+</ul>
+
+<aside>
+<p>調号が同じ長調と短調を互いに平行調と呼ぶ。</p>
+<p>主音が同じ長調と短調を互いに同主調と呼ぶ。</p>
+</aside>
+
+<aside>
+<p>例1：イ短調</p>
+<p>上行はハ長調と同じ</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:C
+A, "*"_B, =B, C ^C D ^D E F ^F G ^G A
+</div>
+</div>
+<p>下行はイ長調と同じ</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:C
+A ^G =G ^F =F E "*"^D =D ^C =C B, _B, A,
+</div>
+</div>
+
+<p>例2：ロ短調</p>
+<p>上行はニ長調と同じ</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:Bm
+B, "*"=C ^C D ^D E ^E F G ^G A ^A B
+</div>
+</div>
+<p>下行はロ長調と同じ</p>
+<div class="scroll">
+<div class="score">
+L:1
+K:Bm
+B ^A =A ^G =G F "*"^E =E ^D =D C =C B,
+</div>
+</div>
+</aside>
+
+<aside>
+<p>以上が旋律半音階の説明である。</p>
+<p>なお、旋律半音階を用いず「上行はすべて＃、下行はすべて♭」あるいは「上行も下行もすべて＃か♭に統一」などとする記法もある。</p>
+</aside>
+
+<h2>全音音階</h2>
+<p>全音のみからなる6音音階を<dfn>全音音階</dfn>と呼ぶ。</p>
+<p>全音音階は次の2通りだけである。</p>
+<div class="score">
+L:1
+K:C
+C D E ^F ^G ^A c
+^C ^D F G A B ^c
+</div>
+
+<h2>民族音階（省略）</h2>
+
+<script>
+renderabc();
+maketoc();
+</script>

@@ -73,3 +73,20 @@ function renderabc(){
   }
  }
 }
+/*
+function renderabc(){
+ var score = document.getElementsByClassName("score");
+ if (score) {
+  for( var i in score ){
+   if( score[i].classList ) {
+    if( score[i].classList.contains('long') ) {
+     ABCJS.renderAbc( score[i], score[i].innerHTML);
+    }
+    else {
+     ABCJS.renderAbc( score[i], score[i].innerHTML,{staffwidth:300} );
+    }
+   }
+  }
+ }
+}
+*/
