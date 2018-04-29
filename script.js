@@ -1,33 +1,3 @@
-function maketoc2(){
- var id_toc = 'table-of-contents';
- if(null == document.getElementById(id_toc)){ return 1; }
-
- var ol = document.createElement('ol');
-
- var h2 = document.getElementsByTagName('h2');
- for (var i = 0; i < h2.length; i++) {
-  var a = document.createElement('a');
-  a.innerHTML = "§" + (i + 1) + " " + h2[i].innerHTML;
-
-  if(h2[i].hasAttribute('title')){
-   var title = h2[i].getAttribute('title');
-  }
-  else {
-   var title = h2[i].innerHTML;
-  }
-  var id = encodeURIComponent("§" + (i + 1) + "_" + title);
-  h2[i].id = id;
-  a.setAttribute('href', "#" + id);
-
-  var li = document.createElement('li');
-  li.appendChild(a);
-
-  ol.appendChild(li);
- }
- document.getElementById('table-of-contents').appendChild(ol);
-
-};
-
 function maketoc(){
  if (null == document.getElementById('table-of-contents')){ return 1; }
 
@@ -65,6 +35,12 @@ function maketoc(){
  document.getElementById('table-of-contents').appendChild(ol);
 }
 
+function addfooter(){
+ var footer = document.createElement('footer');
+ footer.innerHTML = '<small class="copyright">&copy; 2018 <a href="https://twitter.com/metasta">metasta</a></small>';
+ document.body.appendChild(footer);
+}
+
 function renderabc(){
  var score = document.getElementsByClassName("score");
  if( !score ) { return; }
@@ -76,4 +52,10 @@ function renderabc(){
    ABCJS.renderAbc( score[i], score[i].innerHTML.replace(/\\n/g,"\n").replace("&lt;","<").replace("&gt;",">"),{staffwidth:300} );
   }
  }
+}
+
+function s(){
+ renderabc();
+ maketoc();
+ addfooter();
 }
