@@ -67,26 +67,13 @@ function maketoc(){
 
 function renderabc(){
  var score = document.getElementsByClassName("score");
- if (score) {
-  for( var i in score ){
-   ABCJS.renderAbc( score[i], score[i].innerHTML,{staffwidth:300} );
+ if( !score ) { return; }
+ for(var i in score){
+  if( score[i].classList && score[i].classList.contains('long') ){
+   ABCJS.renderAbc( score[i], score[i].innerHTML.replace(/\\n/g,"\n").replace("&lt;","<").replace("&gt;",">") );
+  }
+  else if( score[i].innerHTML ){
+   ABCJS.renderAbc( score[i], score[i].innerHTML.replace(/\\n/g,"\n").replace("&lt;","<").replace("&gt;",">"),{staffwidth:300} );
   }
  }
 }
-/*
-function renderabc(){
- var score = document.getElementsByClassName("score");
- if (score) {
-  for( var i in score ){
-   if( score[i].classList ) {
-    if( score[i].classList.contains('long') ) {
-     ABCJS.renderAbc( score[i], score[i].innerHTML);
-    }
-    else {
-     ABCJS.renderAbc( score[i], score[i].innerHTML,{staffwidth:300} );
-    }
-   }
-  }
- }
-}
-*/

@@ -137,7 +137,7 @@ nav#header li:not(:first-child):before {
  color: #aaa;
 }
 .scroll {
- overflow: auto;
+ overflow: scroll;
  white-space: nowrap;
 }
 
@@ -159,5 +159,3 @@ input.ans + div {
 input.ans:checked + div {
  display: block;
 }
-
-

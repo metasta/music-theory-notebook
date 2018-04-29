@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<title>調</title>
+<link rel="stylesheet" href="style.css">
+<script src="abcjs_basic_4.0.0-min.js"></script>
+<script src="script.js"></script>
+
+<nav id="header">
+<ul>
+<li><a href=".">音楽理論ノート</a>
+<li><a href="">調</a>
+</ul>
+</nav>
+
+<h1>調</h1>
+
+<p>ある楽曲、旋律もしくは和声の基礎となる音階を<dfn>調</dfn>と呼ぶ。</p>
+
+<nav id="table-of-contents"></nav>
+
+<aside>
+<p>和名とドイツ音名</p>
+<style>
+table.pitch_name td:not(:first-child){
+ width: 3.5em;
+ text-align: center;
+}
+</style>
+<div class="scroll">
+<table class="fig pitch_name">
+<tr><td><td>ド<td>レ<td>ミ<td>ファ<td>ソ<td>ラ<td>シ
+<tr><td>和名<td>ハ<td>ニ<td>ホ<td>ヘ<td>ト<td>イ<td>ロ
+<tr class="u"><td>ドイツ音名<td><ruby>C<rt>ツェー</ruby><td><ruby>D<rt>デー</ruby><td><ruby>E<rt>エー</ruby><td><ruby>F<rt>エフ</ruby><td><ruby>G<rt>ゲー</ruby><td><ruby>A<rt>アー</ruby><td><ruby><b>H</b><rt>ハー</ruby>
+<tr><td><td>ド♯<td>レ♯<td>ミ♯<td>ファ♯<td>ソ♯<td>ラ♯<td>シ♯
+<tr><td>和名<td>嬰ハ<td>嬰ニ<td>嬰ホ<td>嬰ヘ<td>嬰ト<td>嬰イ<td>嬰ロ
+<tr class="u"><td>ドイツ音名<td><ruby>Cis<rt>ツィス</ruby><td><ruby>Dis<rt>ディス</ruby><td><ruby>Eis<rt>エイス</ruby><td><ruby>Fis<rt>フィス</ruby><td><ruby>Gis<rt>ギス</ruby><td><ruby>Ais<rt>アイス</ruby><td><ruby>His<rt>ヒス</ruby>
+<tr><td><td>ド♭<td>レ♭<td>ミ♭<td>ファ♭<td>ソ♭<td>ラ♭<td>シ♭
+<tr><td>和名<td>変ハ<td>変ニ<td>変ホ<td>変ヘ<td>変ト<td>変イ<td>変ロ
+<tr class="u"><td>ドイツ音名<td><ruby>Ces<rt>ツェス</ruby><td><ruby>Des<rt>デス</ruby><td><ruby>Es<rt>エス</ruby><td><ruby>Fes<rt>フェス</ruby><td><ruby>Ges<rt>ゲス</ruby><td><ruby>As<rt>アス</ruby><td><ruby><b>B</b><rt>ベー</ruby>
+<tr><td><td>ド𝄪<td>レ𝄪<td>ミ𝄪<td>ファ𝄪<td>ソ𝄪<td>ラ𝄪<td>シ𝄪
+<tr><td>和名<td>重嬰ハ<td>重嬰ニ<td>重嬰ホ<td>重嬰ヘ<td>重嬰ト<td>重嬰イ<td>重嬰ロ
+<tr class="u"><td>ドイツ音名<td><ruby>Cisis<rt>ツィシス</ruby><td><ruby>Disis<rt>ディシス</ruby><td><ruby>Eisis<rt>エイシス</ruby><td><ruby>Fisis<rt>フィシス</ruby><td><ruby>Gisis<rt>ギシス</ruby><td><ruby>Aisis<rt>アイシス</ruby><td><ruby>Hisis<rt>ヒシス</ruby>
+<tr><td><td>ド𝄫<td>レ𝄫<td>ミ𝄫<td>ファ𝄫<td>ソ𝄫<td>ラ𝄫<td>シ𝄫
+<tr><td>和名<td>重変ハ<td>重変ニ<td>重変ホ<td>重変ヘ<td>重変ト<td>重変イ<td>重変ロ
+<tr><td>ドイツ音名<td><ruby>Ceses<rt>ツェセス</ruby><td><ruby>Deses<rt>デセス</ruby><td><ruby>Eses<rt>エセス</ruby><td><ruby>Feses<rt>フェセス</ruby><td><ruby>Geses<rt>ゲセス</ruby><td><ruby>Ases<rt>アセス</ruby><td><ruby><b>Bes</b><rt>ベス</ruby>
+</table>
+</div>
+<p><small>※ 重変イ音 Ases を Asas、重変ロ音 Bes を BB と呼ぶこともある。</small></p>
+
+</aside>
+
+<h2>調と調号</h2>
+<style>
+table.key_signature {
+ display: inline-block;
+}
+table.key_signature caption {
+ text-align: left;
+}
+table.key_signature tr:first-child {
+ text-align: center;
+}
+table.key_signature td {
+ vertical-align: middle;
+ overflow: hidden;
+}
+table.key_signature td .score {
+ height: 85px !important;
+ width: 125px !important;
+}
+table.key_signature td:nth-child(2) {
+ width: 1em;
+}
+table.key_signature td:nth-child(3) {
+ padding: 0;
+}
+table.key_signature td:nth-child(3) .score {
+ width: 60px !important;
+}
+table.key_signature td:nth-child(3) .score svg {
+ position: relative;
+ left: -45px !important;
+}
+@media screen and (max-width: 760px) {
+ table.key_signature {
+  display: inherit;
+ }
+}
+@media screen and (max-width: 480px) {
+ table.key_signature {
+  margin-left: 0;
+ }
+ table.fig.key_signature td:not(first-child) {
+  padding-left: 0;
+ }
+ table.key_signature .score {
+  transform-origin: center center;
+ }
+}
+</style>
+<p>長音階の調を<dfn>長調</dfn> dur、短音階の調を<dfn>短調</dfn> moll と呼ぶ。</p>
+<p>ある調の音階に現れる変化記号の集合を、その調の<dfn>調号</dfn>と呼ぶ。</p>
+<aside>
+<p>例：ホ長調 E dur</p>
+<p>E を主音とする長音階は E から全-全-半-全-全-全-半音となる以下の音列より構成される。</p>
+<div class="score">
+%%vocalfont Verdana 10pt
+L:1
+K:C
+V:1
+E ^F ^G A B ^c ^d e
+w: └ 全~┴ 全~┴ 半~┴ 全~┴ 全~┴ 全~┴ 半~┘
+</div>
+<p>この音列に現れる変化記号（♯4つ）を集めたものが E dur の調号である。</p>
+<div class="score">
+%%vocalfont Verdana 10pt
+L:1
+K:C
+V:1
+^F ^G ^c ^d || y [K:E] y
+</div>
+<p>同じく♯4つを音階構成音に含む音階がある。Cis を主音とする自然短音階である。</p>
+<div class="score">
+%%vocalfont Verdana 10pt
+L:1
+K:C
+V:1
+^C ^D E ^F ^G A B ^c
+</div>
+<p>したがって♯4つは E dur の調号であり、同時に cis moll の調号でもある。</p>
+<div class="score">
+%%vocalfont Verdana 10pt
+L:1
+K:E
+V:1
+E F G A B c d e
+w: E:~i ii iii iv v vi vii i
+w: cis:~iii iv v vi vii i ii iii
+</div>
+<p>また、和声短音階の vii 音と旋律短音階上行形の vi, vii 音は自然短音階よりも半音高くなる。</p>
+<div class="score">
+%%vocalfont Verdana 10pt
+L:1
+K:C#m
+V:1
+C D E F G A ^B c
+w: cis: _ _ _ _ _ vii _
+C D E F G ^A ^B c
+w: cis: _ _ _ _ vi vii _
+</div>
+<p>以上より、E dur と cis moll の調号と変化音について以下のようにまとめられる。</p>
+<ul>
+<li>E dur には♯4つの調号がつく。
+<li>cis moll には♯4つの調号がつき、加えて Ais, His 音も現れることがある。
+</ul>
+<div class="scroll">
+<table class="fig key_signature">
+<tr>
+<td><div class="score">L:1\nK:E\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^A ^B yyyyyyyyyy</div><td>) E / cis
+</table>
+</div>
+</aside>
+<p>調号と調との対応を次に示す。あわせて和声・旋律短音階での変化音も示す。</p>
+<div class="scroll">
+<table class="fig key_signature">
+<caption><h3 title="嬰種調"><ruby>嬰<rt>えい</rt>種<rt>しゅ</ruby>調</h3></caption>
+<tr class="u">
+<td>調号<td>
+<td>変化音
+<td>dur / moll
+<tr>
+<td><div class="score">L:1\nK:C\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^f ^g yyyyyyyyyy</div><td>) C / a
+<tr>
+<td><div class="score">L:1\nK:G\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^c ^d yyyyyyyyyy</div><td>) G / e
+<tr>
+<td><div class="score">L:1\nK:D\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^g ^a yyyyyyyyyy</div><td>) D / h
+<tr>
+<td><div class="score">L:1\nK:A\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^d ^e yyyyyyyyyy</div><td>) A / fis
+<tr>
+<td><div class="score">L:1\nK:E\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^A ^B yyyyyyyyyy</div><td>) E / cis
+<tr>
+<td><div class="score">L:1\nK:B\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^e ^^f yyyyyyyyyy</div><td>) H / gis
+<tr>
+<td><div class="score">L:1\nK:F#\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^B ^^c yyyyyyyyyy</div><td>) Fis / dis
+<tr>
+<td><div class="score">L:1\nK:C#\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^^f ^^g yyyyyyyyyy</div><td>) Cis / ais
+</table>
+<table class="fig key_signature">
+<caption><h3 title="変種調"><ruby>変<rt>へん</rt>種<rt>しゅ</ruby>調</h3></caption>
+<tr class="u">
+<td>調号<td>
+<td>変化音
+<td>dur / moll
+<tr style="opacity:.3">
+<td><div class="score">L:1\nK:C\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n ^f ^g yyyyyyyyyy</div><td>) C / a
+<tr>
+<td><div class="score">L:1\nK:F\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n =B ^c yyyyyyyyyy</div><td>) F / d
+<tr>
+<td><div class="score">L:1\nK:Bb\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n =e ^f yyyyyyyyyy</div><td>) B / g
+<tr>
+<td><div class="score">L:1\nK:Eb\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n =A =B yyyyyyyyyy</div><td>) Es / c
+<tr>
+<td><div class="score">L:1\nK:Ab\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n =d =e yyyyyyyyyy</div><td>) As / f
+<tr>
+<td><div class="score">L:1\nK:Db\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n =G =A yyyyyyyyyy</div><td>) Des / b
+<tr>
+<td><div class="score">L:1\nK:Gb\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n =c =d yyyyyyyyyy</div><td>) Ges / es
+<tr>
+<td><div class="score">L:1\nK:Cb\nyyyyyyyyyy</div><td>(
+<td><div class="score">L:1\n =F =G yyyyyyyyyy</div><td>) Ces / as
+</table>
+</div>
+
+<aside>
+<p>調号から調を知るには</p>
+<p>最後の♯の2度上、最後の♭の5度上が長調の主音となる。</p>
+<p>長調の主音の短3度下が短調の主音となる。</p>
+<p>例</p>
+<div class="scroll">
+<div class="score">L:1\nK:D\n"1."yy||[K:F#]"2."yy||[K:Eb]"3."yy||[K:Cb]"4."yy</div>
+</div>
+<ol>
+<li>最後の♯は C なので、C の2度上 D で D dur。D の短3度下 H で h moll。
+<li>最後の♯は E なので、E の2度上 F で Fis dur。Fis の短3度下 Dis で dis moll。
+<li>最後の♭は A なので、A の5度上 E で Es dur。Es の短3度下 C で c moll。
+<li>最後の♭は F なので、F の5度上 C で Ces dur。Ces の短3度下 As で as moll。
+</ol>
+</aside>
+
+<h2>近親調</h2>
+
+<p>ある調と近い関係にある調を<dfn>近親調</dfn>あるいは<dfn>関係調</dfn>と呼ぶ。</p>
+
+<h3>同主調</h3>
+<p>主音が同じ調を<dfn>同主調</dfn>と呼ぶ。</p>
+<aside>
+<p>同主調の例</p>
+<p>C dur の同主調は c moll、c moll の同主調は C dur である。</p>
+</aside>
+
+<h3>平行調</h3>
+<p>調号が同じ調を<dfn>平行調</dfn>と呼ぶ。</p>
+<aside>
+<p>平行調の例</p>
+<p>C dur の平行調はa moll、a moll の平行調は C dur である。</p>
+</aside>
+
+<h3>属調</h3>
+<p>もとの調の属音を主音とする調を<dfn>属調</dfn>と呼ぶ。</p>
+<aside>
+<p>属調の例</p>
+<p>C dur の属調は G dur である。</p>
+</aside>
+
+<h3>下属調</h3>
+<p>もとの調の下属音を主音とする調を<dfn>下属調</dfn>と呼ぶ。</p>
+<aside>
+<p>下属調の例</p>
+<p>C dur の下属調は F dur である。</p>
+</aside>
+
+<aside>
+<p>以上4つの調のほか、属調の平行調（C dur → e moll）と下属調の平行調（C dur → d moll）を含める場合や、さらに属調の同主調（C dur → g moll）と下属調の同主調（C dur → f moll）を含める場合もある。</p>
+</aside>
+
+<p>近親調でない調を<dfn>遠隔調</dfn>と呼ぶ。</p>
+
+<h2>旋律の調判定</h2>
+
+<p>旋律や和声（の一部）の調を推定することを<dfn>調判定</dfn>あるいは<dfn>調性判断</dfn>と呼ぶ。</p>
+
+<aside>
+<p>音を聴いて（または頭の中で音を想像して）調を判断できる場合は理論を持ち出す必要はない。</p>
+<p>以下では楽譜を見て理論的に調を推定する方法を述べる。</p>
+</aside>
+
+<h3>調号の推定</h3>
+
+<p>♯系の旋律なら Fis → Cis → Gis → ... の順に、♭系の曲なら B → Es → As → ... の順に、以下の方法で音階固有音かどうかを調べ、調号を推定する。</p>
+<p>以下の音は音階固有音である。</p>
+<ul>
+<li>次の音へ跳躍進行する音（短調の導音である場合もある）
+<li>次の音へ2度上行するときと2度下行するときで音高が変化しない音
+<li>♯がついていて、次の音へ2度下行する音
+<li>♭がついていて、次の音へ2度上行する音
+</ul>
+<p>また、以下の音は音階固有音ではない。</p>
+<ul>
+<li>異名同音が現れる音
+<li>音階固有音の変化音
+</ul>
+
+<h3>平行調の判別</h3>
+<p>調号が同じ長調と短調のうち、短調の下主音には次の特徴がある。</p>
+<ul>
+<li>短調の下主音は長2度下行する。
+</ul>
+<p>この特徴に合えば短調、合わなければ長調と判定する。</p>
+
+<aside>
+<p>練習</p>
+<p>次の旋律の調を答えよ。</p>
+<p>1.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:C
+zc Bd c2 G2 | z_A G_B A2 D2 | zF B,D GF _EC | DG ^FG AB cd
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は C, D, Es, F, G, As, H。<br>
+したがって ♭が B, Es, As の3つで Es dur か c moll。<br>
+Es dur に H は現れないので正解は c moll。</p>
+</div>
+
+<p>2.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:3/4
+V:1 alto
+C2 | C3 D CA, | F,2 D3 _D | C_B, E,3 B, | _B,C G,2 zB, | _B,2 A,2
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は C, E, F, G, A, B。<br>
+♭が B の1つで F dur か d moll。<br>
+C が長2度下行以外の進行をしているので d moll ではなく正解は F dur。</p>
+</div>
+
+<p>3.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:2/4
+z ^d (^^cd | e^d1/2^c1/2) .B.^G | ,^^F.^A (^D^E1/2F1/2 | ^G) z ^A>B | .^c.^d
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+gis moll
+<p>跳躍進行する音は Fisis, Ais, H。また Cis は2度上行でも2度下行でも Cis。また Dis, Gis は2度下行する嬰音。<br>
+♯が Fis, Cis, Gis, Dis, Ais の5つで H dur か gis moll。<br>
+H dur に Fisis は現れないので正解は gis moll。</p>
+</div>
+
+<p>4.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:6/8
+z (G_A) z (G^F) | z (GA) B>c_E | z _ec -c1/2_B1/2_A(G | G3/2)_A1/2G -G2 B, | C_E2 D2
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は C, Es, G。<br>
+これだけだと♭2つの B dur, g moll, ♭3つの Es dur, c moll, ♭4つの As dur, f moll が考えられる。<br>
+f moll は Es の動きから除外できる。<br>
+残りを理論的に順を追って切るのは難しいかもしれない。<br>
+ただ A, H が上行で♮、下行で♭になっている。正解は c moll。</p>
+</div>
+
+<p>5.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:4/4
+G2 B3/2A1/2 G2 D2 | E2 c3/2B1/2 A2 ^A2 | BA G^D cB A=D | EG cB AD ^FA
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は D, Dis, E, Fis, G, A。ただし D, Dis, E がすべて音階固有音（あるいは短調の導音）となることはありえない。<br>
+いったん Dis を除外すると、♯1つの G dur, e moll, ♯2つの D dur, h moll が考えられる。<br>
+e moll, h moll は下主音の動きから除外して、G dur か D dur。<br>
+D dur なら C の元の音は Cis のはずだが、C は全て C として現れており Cis は登場しない。また Dis は D dur に現れることは考えにくい。<br>
+D dur でなく G dur と考えるのが自然。正解は G dur。</p>
+</div>
+
+<p>6.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:C
+V:1 bass
+E,^G, | A,3 C B,1/2E,1/2^F,1/2^G,1/2 A,2 | C_B, A,F, D,^D, E,A,, | F,3 ^D, E,3
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は E, F, A, H。<br>
+♯、♭のない C dur, a moll が考えられる。<br>
+f, g が上行でのみ fis, gis となっており、正解は a moll。</p>
+</div>
+
+<p>7.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+y | _A2_E AcB | c_Ac _e2=e | f_dB c_BG | _A2c _B3 | y
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音はC, Des, Es, F, As, B。<br>
+♭4つの As dur, f moll、♭5つの Des dur, b mollが考えられる。<br>
+下主音の動きから moll は除外。<br>
+Des dur を理論的に除外する方法が難しいが、G 音が♮で現れており As dur と考えて自然。正解は As dur。</p>
+</div>
+
+<p>8.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+V:1 bass
+y | B,,2 E,G, ^F,2 B,,^D, | -D,E, G,A, B,2 C^A, | B,^G, A,^F, =G,E, ^C,2 | ^D,2 B,,2
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は C, Dis, E, Fis, G, A, H。<br>
+♯1つの G dur, e moll のうち、Dis を導音とする e moll がぴったり当てはまる。<br>正解は e moll。</p>
+</div>
+
+<p>9.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+V:1 alto
+y | ^F^E F2 D2 | B4 A2 | DC B,^C DG | ^F3G E2 | y
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は D, Fis, G, A。<br>
+♯1つの G dur, e moll、♯2つの D dur, h moll が考えられる。<br>
+下主音の動きから moll は除外。<br>
+G dur と D dur を上記の理論だけから選ぶことは難しいかもしれないが、<br>
+G dur（Fis が導音、G が主音）にしては Fis は主音に向かっていない（4小節目では一瞬向かっているが、安定していない）。<br>
+正解は D dur。</p>
+</div>
+
+<p>10.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+y | c2 _B2 A2 ^G2 | Ac fe d2 G2 | C2 (3E^F^G A2 =FD | E2 D2 G2
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は C, D, F, G, A。<br>
+C dur。</p>
+</div>
+
+<p>11.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+y E^D EF ^FG | ^GA f^d e2 z2 | g^f gB c^c d^d | e f2 d BG
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は D, E, F, G, A, H。<br>
+C dur。</p>
+</div>
+
+<p>12.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+y | c_B AB c2 cA | FE F^F G2 z2 | d^c d^d e=d _BG | c^c d^d eg
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>跳躍進行する音は C, D, E, G, A, B。<br>
+F dur。</p>
+</div>
+
+<p>『新版 楽典 音楽家を志す人のための』（菊池有恒、音楽之友社、1998）より引用・一部改変した。</p>
+</aside>
+
+<h2>転調</h2>
+
+<p>曲の途中で他の調に移行することを<dfn>転調</dfn>と呼ぶ。</p>
+<aside>
+<p>19世紀までは近親調への転調が主であった。19世紀末以降、遠隔調への転調も多く見られるようになった。</p>
+</aside>
+<p>転調の際には、前の調で使われない音が新しく現れる。この音を<dfn>特徴音</dfn>と呼ぶ。</p>
+
+<aside>
+<p>練習</p>
+<p>次の曲は何調から何調に転調しているか。</p>
+
+<p>1.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:3/4
+^FG | A3^G A=G | ^FE D2 ^CD | E2 A,2 A,2 | GA Bc BA | ec dB cA | B2
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>D dur → G dur</p>
+</div>
+
+<p>2.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:2/4
+GB GE | ^FA GF | E2 e2 | de dB | cd cA | B2 G2 | d3 B | GA
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>e moll → G dur</p>
+</div>
+
+<p>3.</p>
+<div class="scroll">
+<div class="score long">
+L:1/4
+M:4/4
+^G3/2A1/2^F^D | E ^G B d | ^c3/2d1/2 e1/2c1/2 B1/2^G1/2 | A2 z ^c1/2d1/2 | e e
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>E dur → A dur</p>
+</div>
+
+<p>4.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:6/8
+V:1 bass
+D,2 F, A,2 _B, | G,2 A, D,3 | D2 C _B,2 G, | A,6 | C2 ^C D2 _B, | A,2 C F,2 ^F, | G,3 E,3 | F,6 ||
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+<p>d moll → F dur</p>
+</div>
+
+<p>5.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:3/4
+V:1 alto
+_B,_D F_G FD | _E2 _DC _B,2 | _BB _A_G FE | F6 | _AA A_B F2 | cc _B_A Ec | y
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+b moll → f moll
+</div>
+
+<p>6.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:C
+^F^ D2 B, F^E =ED | ^C2 ^A,2 B,2 z2 | ^C^E ^GE ^F^A ^cA | ^B^c ^dB c2 z2 | y
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+H dur → Cis dur
+</div>
+
+<p>7.</p>
+<div class="scroll">
+<div class="score long">
+L:1/8
+M:3/4
+G3 B cA | ^F2 EF G^G | A^A Bc dc | B4 _B2 | d>^c d=c _BA | c3 A F2 | y
+</div>
+</div>
+<input type="checkbox" class="ans">
+<div>
+G dur → F dur
+</div>
+
+<p>『新版 楽典 音楽家を志す人のための』（菊池有恒、音楽之友社、1998）より引用・一部改変した。</p>
+</aside>
+
+<h2>移調</h2>
+
+<p>楽曲全体を別の調に移すことを<dfn>移調</dfn>と呼ぶ。</p>
+<aside>
+<p>Fis Dur → Ges dur などの異名同調への移動も、高さは変わらないが移調と呼ぶ。</p>
+</aside>
+
+<aside>
+<p>なお長調から短調、短調から長調への移動は移調ではなく移旋と呼ぶ。</p>
+</aside>
+
+<h3>移高の方法</h3>
+<p>調号を用いず臨時記号のみの楽譜へ移すことを<dfn>移高</dfn>と呼び、調号を用いた移調と区別する。</p>
+
+<aside>
+<p>移高の課題では、原曲の調号が何であるか、また原曲の実際の調が何であるかによらず、すべて調号のない臨時記号のみの楽譜へ移す。</p>
+</aside>
+
+<p>例題1：次の旋律を長3度下に、臨時記号を用いて移調せよ。</p>
+
+<div class="score">
+L:1/4
+M:C
+K:G
+e3/2=f1/2gB | A B ^c2 ||
+</div>
+
+<aside>
+<p>「臨時記号を用いて移調せよ」は移高の意味。</p>
+</aside>
+
+
+<p>解：まず音符を下に3度移動し、臨時記号の性質を↑↓などで記入する。</p>
+
+<div class="score">
+L:1/4
+M:C
+K:G
+c3/2"_↓"d1/2eG | F G "_↑"A2 ||
+</div>
+
+<p>原曲の調号の長3度下の調号を確認する。今回は G dur（♯1つ）の長3度下で Es dur（♭3つ）となる。</p>
+
+<div class="score">
+L:1/4
+M:C
+c3/2"_↓"d1/2eG | F G "_↑"A2 || [K:Eb]</div>
+
+<aside>
+<p>このとき単に「♯1つ＝G dur、その長3度下＝Es dur」という考え方でよく、実際の調を判定する必要はない。</p>
+</aside>
+
+<p>確認した調号により変化するすべての音に臨時記号を記入する。</p>
+
+<div class="score">
+L:1/4
+M:C
+c3/2"_↓"d1/2_eG | F G "_↑"_A2 ||
+</div>
+
+<p>↑↓を臨時記号に反映して完成。</p>
+
+<div class="score">
+L:1/4
+M:C
+c3/2_d1/2_eG | F G =A2 ||
+</div>
+
+<aside>
+<p>移動により通常ありえない調になる場合がある。</p>
+<p>例：次の旋律を増2度上に、臨時記号を用いて移調せよ。</p>
+<div class="score">
+L:1/8
+M:C
+K:G
+G2 F2 B2 c2 | _ed ^cd G2 z2 ||
+</div>
+
+<p>G dur → Ais dur（♯10個）</p>
+<div class="score">
+L:1/8
+M:C
+^A2 ^^G2 ^^c2 ^d2 | ^f^e ^^de ^A2 z2 ||
+</div>
+<p>このような場合でも移高課題では異名同調（B dur）に直さずそのまま解答する。</p>
+</aside>
+
+<h3>移調の方法</h3>
+
+<p>原曲に調号がある場合、次のように移高とほぼ同じ方法で移調できる。</p>
+<p>例題：次の旋律を短2度下に、調号を用いて移調せよ。</p>
+<div class="score">
+L:1/8
+M:C
+K:Bb
+d3 =e f3 d | B3_A G=B cd ||
+</div>
+
+<p>解：まず移高と同様に、音符を下に2度移す。</p>
+<div class="score">
+L:1/8
+M:C
+K:Bb
+c3 "_↑"d e3 c | A3"_↓"G F"_↑"A Bc ||
+</div>
+
+<p>原曲の調号は B dur なので、短2度下の A dur の調号をつける。</p>
+<div class="score">
+L:1/8
+M:C
+K:A
+c3 "_↑"d e3 c | A3"_↓"G F"_↑"A Bc ||
+</div>
+
+<aside>
+<p>このときも強いて実際の調を判定する必要はないが、移高の場合と異なり、♯10個などのありえない調をそのまま解答することはできない。その場合は課題の移動音程を適宜読み替え（例：「増3度」→「完全4度」）、異名同調で解答する。</p>
+</aside>
+
+
+
+<p>臨時記号（↑↓）を処理して完成。</p>
+<div class="score">
+L:1/8
+M:C
+K:A
+c3 ^d e3 c | A3=G F^A Bc ||
+</div>
+
+<p>原曲に調号がついていない場合、(1) 調を判定する (2) C dur の曲とみなす の2種類の解答方法がある。</p>
+
+<aside>
+<p>2種類の解答は調号は異なるが音高は同じになる。</p>
+<p>2種類の解答はどちらを答えてもよい場合もあるが、出題によってはどちらか一方の解法でしか解答できなかったり、またどちらか一方の解答のみが正解となる場合もあるため、両方の解法を知っている必要がある。</p>
+<p>なお、♯10個などのありえない調はこの2種類の方法のどちらかで必ず回避できるので、原曲に調号がない移調課題では異名同調は用いない。</p>
+</aside>
+
+<p>また課題によっては「♯3個の調へ」や「平行調の属調の同主調へ」など、音程でなく調号や調を指定される場合がある。このときは原曲の調判定を行ってから移調する。</p>
+
+<aside>
+<p>たとえば「同主調の平行調へ移調せよ」という課題で a moll の曲を誤って C dur と判定すると、fis moll（＃3つ、長3度下げ）へ移調すべきところ Es dur（♭3つ、長3度上げ）へ移調してしまう。</p>
+</aside>
+
+<h3>移調楽器</h3>
+<p>記音と異なる音高で演奏される楽器を<dfn>移調楽器</dfn>と呼ぶ。</p>
+<aside>
+<p>コーラングレ、クラリネット、ホルン、トランペット、サックスなどがあるほか、記音より 1 oct. 高いピッコロや 1 oct. 低いコントラバスも移調楽器である。</p>
+</aside>
+<p>特に管楽器の場合、記音Cにより奏される実音を用いてB管、Es管、A管、F管などと呼ばれる。</p>
+
+<h2>移旋</h2>
+
+<p>長調の旋律を短調に、また短調の旋律を長調に、あるいは他の種類の音階に置き換えることを<dfn>移旋</dfn>と呼ぶ。</p>
+<p>移旋は変奏の一種である。</p>
+
+<aside>
+<p>移旋の例</p>
+<p>原曲</p>
+<div class="score">L:1/8\nM:C\nK:F
+FG A2 cd c2 | fe dc =BG c2 ||</div>
+
+<p>平行調の和声短音階に移旋</p>
+<div class="score">L:1/8\nM:C\nK:Dm
+DE F2 AB A2 | d^c BA ^GE A2 ||</div>
+
+<p>移旋は音階の置き換えである。上の例のように他の調の音階に置き換える場合も移旋と呼ぶ。</p>
+</aside>
+
+<p>移旋する音階に合わせ、iii, vi, vii 音が半音変化する。</p>
+<p>臨時に変化する音は原曲に従う。</p>
+
+<aside>
+<p>例</p>
+<p>原曲 C dur</p>
+<div class="score">L:1/8\nM:C\nK:C
+GA _B=B cB A_A | G2 F2 E2 z2 ||</div>
+
+<p>同主調の旋律短音階に調号を用いず移旋</p>
+<div class="score">L:1/8\nM:C\nK:C
+GA _B=B c"↓"_B "^↓""_="A_A | G2 F2 "↓"_E2 z2 ||
+</div>
+
+<p>長音階と旋律短音階の差は iii 音と下行形の vi, vii 音（↓）だが、（＝）部分では後続音の臨時変化があるため原曲に従っている。</p>
+</aside>
+
+<aside>
+<p>上行形・下行形の使い分け</p>
+<div class="scroll">
+<div class="score long">
+%%score {1 | 2}
+%%vocalfont Verdana 10pt
+L:1/8
+K:Cm
+V:1
+CD EF GF EC | FG "↓"A"↓"B cB AF | G=A =Bc d"↑"=B "↑"=AG | cG EG C2 z2 ||
+V:2
+[C8E8G8] | [C8F8A8] | [=B,8D8G8] | [C8E8G8] ||
+w: c:~I | IV | V | I |
+</div>
+</div>
+<p>旋律短音階の上行形・下行形は、正確には上行・下行ではなく和音により使い分けられる。</p>
+<p>2小節めの IV の和音には ♭vi 音（As）が含まれるため、♭vi 音が一致するよう下行形を用いる。</p>
+<p>3小節めの V の和音には ♮vii 音（H）が含まれるため、♮vii 音が一致するよう上行形を用いる。</p>
+
+</aside>
+
+<script>
+renderabc();
+maketoc();
+</script>
