@@ -1,12 +1,12 @@
 @font-face {
- font-family: "DSDF";
- src: url("FreeSerifSubset-DSDF.eot?") format('eot'),
-      url("FreeSerifSubset-DSDF.woff2") format('woff2'),
-      url("FreeSerifSubset-DSDF.woff") format('woff'),
-      url("FreeSerifSubset-DSDF.ttf")  format('truetype');
+ font-family: "Music";
+ src: url("FreeSerifSubset-MusicSymbols.eot?") format('eot'),
+      url("FreeSerifSubset-MusicSymbols.woff2") format('woff2'),
+      url("FreeSerifSubset-MusicSymbols.woff") format('woff'),
+      url("FreeSerifSubset-MusicSymbols.ttf")  format('truetype');
 }
 :root {
- --family: 'Hiragino Sans',Meiryo,DSDF,sans-serif;
+ --family: Music,'Hiragino Sans',Meiryo,sans-serif;
  --weight: 200;
  --width: 960px;
 }
@@ -38,7 +38,7 @@ section.minor {
  padding: calc(1em + 2px) calc(2em + 2px);
 }
 aside {
- font: 12pt/2 'HiraMaruProN-W4','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO',Verdana,DSDF,sans-serif;
+ font: 12pt/2 Music,'HiraMaruProN-W4','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO',Verdana,sans-serif;
  color: #666;
  box-sizing: border-box;
  margin: 2em;
