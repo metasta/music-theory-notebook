@@ -1,5 +1,12 @@
+@font-face {
+ font-family: "DSDF";
+ src: url("FreeSerifSubset-DSDF.eot?") format('eot'),
+      url("FreeSerifSubset-DSDF.woff2") format('woff2'),
+      url("FreeSerifSubset-DSDF.woff") format('woff'),
+      url("FreeSerifSubset-DSDF.ttf")  format('truetype');
+}
 :root {
- --family: 'Hiragino Sans',sans-serif;
+ --family: 'Hiragino Sans',Meiryo,DSDF,sans-serif;
  --weight: 200;
  --width: 960px;
 }
@@ -31,7 +38,7 @@ section.minor {
  padding: calc(1em + 2px) calc(2em + 2px);
 }
 aside {
- font: 12pt/2 'HiraMaruProN-W4';
+ font: 12pt/2 'HiraMaruProN-W4','HG丸ｺﾞｼｯｸM-PRO','HGMaruGothicMPRO',Verdana,DSDF,sans-serif;
  color: #666;
  box-sizing: border-box;
  margin: 2em;
