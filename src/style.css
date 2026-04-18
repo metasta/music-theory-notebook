@@ -24,6 +24,9 @@
   --bggray: #30353c;
   --fggray: #9298a0;
  }
+ div.score svg {
+  filter: invert(1);
+ }
 }
 
 html {
